@@ -1,0 +1,287 @@
+:root{
+    --brown: #947051;
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    --brown: #947051;
+}
+
+*{
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: black;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color: #514e4e;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.button{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color: #fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.button:hover{
+    background: var(--brown);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1 rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color: var(--brown);
+}
+
+header .navigation a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: #666;
+}
+
+header .navigation a:hover{
+    color: var(--brown);
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    margin-left: 1.5rem;
+    color: #333;
+}
+
+header .icons a:hover{
+    color: var(--brown);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+
+.terms{
+    max-width: 85%;
+    margin: 50px;
+    margin-left: 50px;
+}
+
+.terms p{
+    font-size: 1.5rem;
+    color: var(--brown);
+    padding: 0.5rem 0;
+    line-height: 1.5;
+}
+
+.terms h3{
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.terms h4{
+    font-size: 1.2rem;
+    color: var(--brown);
+}
+
+.feedback .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.feedback .row form{
+    flex: 1 1 40rem;
+    padding:  2rem 2.5rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.1);
+    background: #fff;
+    border-radius: .5rem;
+}
+
+.feedback .row form .box{
+    padding: 1rem;
+    font-size: 1.7rem;
+    color: #333;
+    text-transform: none;
+    border: .1rem solid rgba(0,0,0,.1);
+    border-radius: .5rem;
+    margin: .7rem 0;
+    width: 100%;
+}
+
+.feedback .row form .box:focus{
+    border-color: var(--pink);
+}
+
+.feedback .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+
+.feedback .row .image{
+    flex: 1 1 40rem;
+}
+
+.feedback .row .image .img{
+    width: 100%;
+}
+
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    flex: 1 1 25rem;
+}
+
+.footer .box-container .box h3{
+    color: #333;
+    font-size: 2.5rem;
+    padding: 1 rem 0;
+}
+
+.footer .box-container .box a{
+    display: block;
+    color: #666;
+    font-size: 1.5rem;
+    padding: 1 rem 0;
+}
+
+.footer .socials{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+@media(max-width: 991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    header{
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px){
+
+    html .fa-bars{
+        display: block;
+    }
+
+    header .navigation{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navigation a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 450px){
+
+    html{
+        font-size: 50%;
+        
+    }
+}
+
